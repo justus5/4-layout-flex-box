@@ -1,0 +1,148 @@
+html, body {
+    margin: 0 auto;
+    font-family: Times New Roman, sans-serif;
+    
+}
+
+body {
+    font-size: 20px;
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+
+.box {
+    text-align: center;
+    color: white;
+    
+}
+
+.box > div {
+    background-color: red;
+    text-align: center;
+
+}
+
+.content {
+    display: flex;
+}
+
+.tekst {
+    background-color: deepskyblue;
+    color: white;
+
+}
+
+.aside1 {
+    color: white;
+    background-color: green;
+
+}
+
+.aside2 {
+    color: white;
+    background-color: pink;
+
+}
+
+.stopka {
+    color: white;
+    background-color: darkviolet;
+}
+
+
+@media screen and (min-width: 992px) {
+     .box > div {
+        height: 40px;
+        line-height: 40px;
+    }
+    .content {
+        height: 400px;
+    }
+    .tekst {
+        flex-basis: 60%;
+        order: 2;
+    }
+    
+    .aside1 {
+        order: 1;
+        flex-basis: 20%;
+        
+    }
+    .aside2 {
+        flex-basis: 20%;
+        order: 3;
+    }
+    
+     .stopka {
+        height: 40px;
+        line-height: 40px;
+    }
+}
+    
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .box > div {
+        height: 40px;
+        line-height: 40px;
+        
+    }
+    .content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 600px;
+    }
+    
+    .tekst {
+        order: 1;
+        flex-basis: 720px;
+    }
+    
+    .aside1 {
+        width: 992px;
+        order: 3;
+        
+    }
+    .aside2 {
+        order: 2;
+        flex-basis: 270px;
+    }
+    
+    .stopka {
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .box > div {
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    .content {
+        flex-direction: column;
+        height: 660px;
+    }
+
+     .tekst {
+        order: 1;
+        flex-basis: 450px;
+    }
+    .aside2 {
+        order: 2;
+        flex-basis: 240px;
+    }
+    .aside1 {
+        order: 2;
+        flex-basis: 260px;
+    }
+     .stopka {
+        height: 40px;
+        line-height: 40px;
+    }
+}
